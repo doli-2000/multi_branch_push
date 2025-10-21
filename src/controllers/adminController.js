@@ -6,7 +6,7 @@ import { defineProductModel } from "../models/Admin/Product.js";
 export const getAdminProducts = async (req, res) => {
   try {
     const { adminId } = req.params;
-
+    console.log('skdf muti branch push code ')
     // 1️⃣ Super Admin DB থেকে Admin DB info fetch
     const dbConfig = await AdminDatabase.findOne({ where: { admin_id: adminId } });
     if (!dbConfig) return res.status(404).json({ error: "Admin DB not found" });
