@@ -3,6 +3,7 @@ import { getAdminDb } from "../config/adminDb.js";
 import AdminDatabase from "../models/SuperAdmin/AdminDatabase.js";
 import { defineProductModel } from "../models/Admin/Product.js";
 
+
 export default async function adminRoutes(fastify) {
   fastify.get("/admin/:adminId/products", async (request, reply) => {
     const { adminId } = request.params;
